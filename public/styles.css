@@ -1,0 +1,239 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  background: #eee;
+  padding: 0 16px;
+}
+
+.headerClass {
+  background-color: #d0aae6;
+  margin: auto -16px;
+  padding: 16px 32px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.headerh1 {
+  color: #fff;
+  font-family: "McLaren", cursive;
+  font-weight: 200;
+}
+
+.headerh1Span{
+  margin: 0 0 0 60%;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+}
+
+footer p {
+  color: rgb(10, 210, 224);
+}
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.note button {
+  position: relative;
+  float: right;
+  margin-right: 10px;
+  color: #df8ef8;
+  border: none;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  outline: none;
+}
+
+.formInput {
+  position: relative;
+  width: 480px;
+  margin: 30px auto 20px auto;
+  background: #fff;
+  padding: 15px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+form .inpClass,
+form textarea {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+.searchInput{
+  position: relative;
+  width: 380px;
+  margin: 30px auto 20px 200px;
+  background: #fff;
+  padding: 7px;
+  border-radius: 7px;
+  box-shadow: 0 1px 5px rgb(138, 137, 137);
+}
+
+.searchInput input{
+  width: 100%;
+  border: none;
+  padding: 4px;
+  outline: none;
+  font-size: 1.2em;
+  font-family: inherit;
+  resize: none;
+}
+
+form .butClass {
+  position: absolute;
+  right: 89px;
+  bottom: -18px;
+  background: #f5ba13;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+form .butClass .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: rgb(173, 199, 202);
+  color: rgb(70, 66, 66);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  
+  position: absolute;
+  left: 18px;
+  bottom: -38px;
+}
+
+form .butClass:hover .tooltiptext {
+  visibility: visible;
+}
+/* form .butClass:hover {
+  background: #13f5aa;
+} */
+
+
+
+form .butClass2 {
+  position: absolute;
+  right: 48px;
+  bottom: -18px;
+  background: #beee4d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+form .butClass2 .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: rgb(173, 199, 202);
+  color: rgb(70, 66, 66);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  
+  position: absolute;
+  left: 20px;
+  bottom: -38px;
+}
+
+form .butClass2:hover .tooltiptext {
+  visibility: visible;
+}
+
+form .butClass3 {
+  position: absolute;
+  right: 7px;
+  bottom: -18px;
+  background: #eec79c;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+}
+
+
+form .butClass3 .tooltiptext {
+  visibility: hidden;
+  width: 150px;
+  background-color: rgb(173, 199, 202);
+  color: rgb(70, 66, 66);
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  
+  position: absolute;
+  left: 20px;
+  bottom: -38px;
+}
+
+form .butClass3:hover .tooltiptext {
+  visibility: visible;
+}
+
+.searchContent{
+  position: 'relative';
+  color: rgb(255, 250, 250);
+  /* background-color: rgb(247, 213, 64); */
+  margin: auto auto auto 75%;
+  width: 2%;
+  height: 32px;
+  border-radius: 20%;
+}
+
+.searchbar{
+  position: 'absolute';
+  height: auto;
+  color: cadetblue;
+  border-radius: 10%; 
+  background-color: rgb(247, 208, 36);
+  text-align: center;
+}
