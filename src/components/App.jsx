@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import SearchBar from "./SearchBar"
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
@@ -11,6 +12,8 @@ function App() {
   const [noteList, setNoteList] = useState([]);
   const [deletedNoteList, setDeletedNoteList] = useState([]);
   const [userName, setUserName] = useState("")
+  const [openNewpost, setopenNewpost] = useState(false);
+  const [openPublishedpost, setopenPublishedpost] = useState(false);
 
 
 
@@ -54,11 +57,29 @@ function App() {
     setUserName(name)
   }
 
+  
   return (
     <div >
-      <StartDialog displayName={showName} />
+    <StartDialog displayName={showName} />
       <Header NameUser={userName} />
-      <CreateArea onAdd={addNote}
+      <button className="buttonNewPost"
+        onClick={() => {
+          setopenNewpost(true)
+          setopenPublishedpost(false)
+        }}
+        onDoubleClick={() => setopenNewpost(false)}>
+        New Posts
+      </button>
+      <SearchBar data={noteList} />
+      <button className="buttonPublishPost"
+        onClick={() => {
+          setopenNewpost(false)
+          setopenPublishedpost(true)
+        }}
+        onDoubleClick={() => setopenPublishedpost(false)}>
+        Published Posts
+      </button>
+      {openNewpost && <CreateArea onAdd={addNote}
         deletedListNote={deletedNoteList}
         restoreItems={restoreContent}
         onClear={() => {
@@ -69,20 +90,20 @@ function App() {
             return ("No Posts to clear.")
           }
         }}
-      />
-      {
-        noteList.map((value, index) => {
-          return (
-            <Note
-              key={index}
-              id={index}
-              title={value.title}
-              content={value.content}
-              onDelete={deleteItem}
-            />
-          );
-        })
+      />}
+      {openPublishedpost && !openNewpost && (noteList.length !== 0) && noteList.map((value, index) => {
+        return (
+          <Note
+            key={index}
+            id={index}
+            title={value.title}
+            content={value.content}
+            onDelete={deleteItem}
+          />
+        );
+      })
       }
+
       <Footer />
     </div >
   );

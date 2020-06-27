@@ -70,7 +70,7 @@ function CreateArea(props) {
           <Fab className="butClass2"
             onClick={() => {
               if (props.deletedListNote.length) {
-                setErrMsg("")
+                setErrMsg("Item Retored")
                 props.restoreItems();
               }
               else {
